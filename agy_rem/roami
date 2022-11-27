@@ -1,0 +1,11 @@
+def romanToInt(self, s):
+        dicti = {'I': 1, 'V': 5, 'X': 10,'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+        elozzo = 0
+        szam   = 0
+        for i in s:
+            romai = dicti[i]
+            szam += romai
+            if romai > elozzo:
+                szam -= 2 * elozzo
+            elozzo = romai
+        return szam
