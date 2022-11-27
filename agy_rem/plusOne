@@ -1,0 +1,26 @@
+class Solution:
+    def plusOne(self, digits):
+        valami = True
+        while valami:
+            if digits[-1] < 9:
+                digits[-1] += 1
+            elif digits[-1] == 9:
+                digits[-1] += 1
+                for i in digits[::-1]:
+                    x = i
+                    if 10 in digits:
+                        a = digits.index(10)
+                        b = a - 1
+                        if b != -1:
+                            digits[a] = 0
+                            digits[b] += 1
+                if 10 in digits:
+                    sajt = digits.index(10)
+                    digits[sajt] = 0
+                    valami = False
+                    digits.insert(0,1)
+            valami = False
+        return digits
+0
+0
+
