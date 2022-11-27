@@ -21,6 +21,4 @@ class Solution:
                     digits.insert(0,1)
             valami = False
         return digits
-0
-0
 
